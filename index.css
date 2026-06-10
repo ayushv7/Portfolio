@@ -1,10 +1,52 @@
 *{
     border: 0;
     margin: 0;
+    padding: 0;
     
 }
 body{
-    height: 100vh;
-    width: 100vw;
-    background-color: green;
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background: url("/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    overflow-x: hidden;
+}
+header{
+    height: 50px;
+    width: 96vw;
+    margin: 5px auto;
+    left: 0;
+    right: 0;
+    max-width: 1500px;
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    /* position: fixed; */
+}
+header:hover{
+    backdrop-filter: blur(17px);
+    border-radius: 15px;
+}
+#main{
+    margin-top: 140px;
+    height: 50vh;
+}
+section{
+    height: 40vh;
+    width: 93vw;
+    max-width: 1400px;
+    /* backdrop-filter: blur(10px); */
+    background-color: white;
+    opacity: 0.3;
+    margin: 60px auto 20px auto;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+section:hover{
+    transform: scale(1.01);
+    opacity: 0.5;
 }
