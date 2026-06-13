@@ -10,7 +10,7 @@ body{
     height: auto;
     width: 100%;
     background: url("/bg.png");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
     margin: 0;
     overflow-x: hidden;
@@ -23,6 +23,10 @@ header{
     right: 0;
     max-width: 1500px;
     backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 50px;
     transition-duration: 0.3s;
     /* position: fixed; */
@@ -33,51 +37,94 @@ header:hover{
 }
 #main{
     margin-top: 140px;
-    height: 70vh;
     max-width: 1500px;
     display: flex;
     padding: 20px;
     gap: 20px;
+    width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 section{
     height: 40vh;
-    width: 93vw;
+    width: 90vw;
     max-width: 1400px;
-    /* backdrop-filter: blur(10px); */
-    background-color: rgb(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    /* background-color: rgb(255, 255, 255, 0.15); */
     margin: 60px auto 20px auto;
     border-radius: 20px;
     transition: 0.2s;
 }
 section:hover{
     transform: scale(1.01);
-    background-color: rgb(255, 255, 255, 0.3);
+    /* background-color: rgb(255, 255, 255, 0.3); */
+    backdrop-filter: blur(5px);
 }
 #main > div{
-    height: 92%;
-    width: 48%;
+    height: 80%;
     /* margin: auto 1rem auto 1rem; */
     margin: auto;
-    background-color: green;
+    /* background-color: green; */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 20px;
+    transition: 0.2s;
 
 }
 #prof{
     flex: 1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+#prof:hover{
+    transform: scale(0.98);
+    background-color: rgba(255, 255, 255, 0.044);
 }
 #des{
     flex: 2;
 }
+#des:hover{
+    transform: scale(0.984);
+    background-color: rgba(255, 255, 255, 0.044);
+}
 #photobr{
-    height: 50%;
-    display: inline-block;
     /* background-color: rgb(0, 0, 0); */
-    margin: 10px;
+    margin-top: 20px;
+    flex: 3;
+    height: 50%;
 }
 #photobr img{
     display: block;
-    height: 100%;
     opacity: 1;
+    height: 100%;
+    width: 97%;
     border-radius: 30px;
+    box-sizing: content-box;
+    border: 10px solid rgba(255, 255, 255, 0.285);
+}
+#name{
+    flex: 1;
+    height: 100%;
+    /* background-color: black; */
+    text-align: center;
+
+}
+#name h1{
+    margin-top: 35px;
+    font-weight: 90px;
+    color: rgba(0, 0, 0, 0.924);
+}
+footer{
+    width: 100vw;
+    height: 300px;
+    backdrop-filter: blur(200px);
+
 }
