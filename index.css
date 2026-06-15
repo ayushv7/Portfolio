@@ -90,6 +90,15 @@ section:hover{
 }
 #des{
     flex: 2;
+    text-align: center;
+    align-content: center;
+    padding: 0 60px;
+}
+#des > p{
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
 }
 #des:hover{
     transform: scale(0.984);
@@ -120,7 +129,7 @@ section:hover{
 #name h1{
     margin-top: 35px;
     font-weight: 90px;
-    color: rgba(0, 0, 0, 0.924);
+    color: rgba(255, 255, 255, 0.924);
 }
 footer{
     width: 100vw;
