@@ -126,5 +126,6 @@ footer{
     width: 100vw;
     height: 300px;
     backdrop-filter: blur(200px);
+    border-top: 1px solid black;
 
 }
