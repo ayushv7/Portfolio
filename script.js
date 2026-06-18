@@ -13,6 +13,7 @@ window.onload = function () {
     "rgba(236, 72, 153, 0.5)",
     "rgba(45, 212, 191, 0.5)",
   ];
+  let sze = [16, 30, 20, 12, 56];
 
   window.addEventListener("resize", function () {
     canvas.width = window.innerWidth;
@@ -32,9 +33,11 @@ window.onload = function () {
     constructor() {
       this.x = Math.random() * window.innerWidth;
       this.y = Math.random() * window.innerHeight;
-      this.size = Math.random() * 24 + 1;
-      this.speedX = (Math.random() - 0.5) * 3.5;
-      this.speedY = (Math.random() - 0.5) * 3.5;
+      //   this.size = Math.random() * 24 + 1;
+      this.size = 1;
+      //   this.size = sze[Math.trunc(Math.random() * sze.length + 1)];
+      this.speedX = (Math.random() - 0.5) * 2.5;
+      this.speedY = (Math.random() - 0.5) * 2.5;
       this.color = clr[Math.trunc(Math.random() * clr.length + 1)];
       this.move = true;
       this.point = false;
@@ -70,7 +73,7 @@ window.onload = function () {
       ctx.fill();
     }
   }
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 360; i++) {
     particlesArray.push(new Particle());
   }
   function handleParticles() {
@@ -85,7 +88,7 @@ window.onload = function () {
         if (distance < 100) {
           ctx.beginPath();
           ctx.strokeStyle = particlesArray[i].color;
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 2;
           ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
           ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
           ctx.stroke();
@@ -124,6 +127,7 @@ window.onload = function () {
         if (distance <= 5) {
           particlesArray[i].point = true;
           particlesArray[i].move = false;
+          particlesArray[i].size = 12;
         } else {
           particlesArray[i].speedX += nx;
           particlesArray[i].speedY += ny;
