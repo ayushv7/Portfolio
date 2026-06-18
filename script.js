@@ -33,11 +33,13 @@ window.onload = function () {
     constructor() {
       this.x = Math.random() * window.innerWidth;
       this.y = Math.random() * window.innerHeight;
+      this.x1;
+      this.y1;
       //   this.size = Math.random() * 24 + 1;
       this.size = 1;
       //   this.size = sze[Math.trunc(Math.random() * sze.length + 1)];
-      this.speedX = (Math.random() - 0.5) * 2.5;
-      this.speedY = (Math.random() - 0.5) * 2.5;
+      this.speedX = (Math.random() - 0.5) * 3.5;
+      this.speedY = (Math.random() - 0.5) * 3.5;
       this.color = clr[Math.trunc(Math.random() * clr.length + 1)];
       this.move = true;
       this.point = false;
@@ -58,6 +60,8 @@ window.onload = function () {
         ) {
           this.speedY = -this.speedY;
         }
+        this.x1 = this.x;
+        this.y1 = this.y;
       }
       if (this.point) {
         this.x = touch.x;
@@ -73,7 +77,7 @@ window.onload = function () {
       ctx.fill();
     }
   }
-  for (let i = 0; i < 360; i++) {
+  for (let i = 0; i < 310; i++) {
     particlesArray.push(new Particle());
   }
   function handleParticles() {
@@ -123,14 +127,24 @@ window.onload = function () {
         document.addEventListener("click", function () {
           particlesArray[i].point = false;
           particlesArray[i].move = true;
+          particlesArray[i].size = 1;
+          touch.x = null;
+          touch.y = null;
         });
         if (distance <= 5) {
           particlesArray[i].point = true;
           particlesArray[i].move = false;
           particlesArray[i].size = 12;
-        } else {
+        } else if(distance <= 80) {
           particlesArray[i].speedX += nx;
           particlesArray[i].speedY += ny;
+        }
+        else{
+            particlesArray[i].x = particlesArray[i].x1;
+            particlesArray[i].y = particlesArray[i].y1;
+            particlesArray[i].x += particlesArray[i].speedX;
+            particlesArray[i].y += particlesArray[i].speedY;
+
         }
       }
     }
