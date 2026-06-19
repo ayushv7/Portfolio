@@ -34,7 +34,7 @@ body {
 
 header {
   height: 50px;
-  width: 96vw;
+  width: 36vw;
   margin: 5px auto;
   left: 0;
   right: 0;
@@ -51,6 +51,8 @@ header {
 header:hover {
   backdrop-filter: blur(17px);
   border-radius: 15px;
+  width: 66vw;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 #main {
@@ -59,12 +61,22 @@ header:hover {
   display: flex;
   padding: 20px;
   gap: 20px;
-  width: 1200px;
+  width: 1400px;
   padding-left: 40px;
+  backdrop-filter: blur(0px);
   padding-right: 40px;
   z-index: 1;
+  transition: 0.3s;
+  backdrop-filter: blur(15px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+#main:hover {
+  width: 1200px;
+  
+}
 section {
   height: 40%;
   width: 90vw;

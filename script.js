@@ -6,12 +6,19 @@ window.onload = function () {
   canvas.height = window.innerHeight;
   const particlesArray = [];
   let i = 0;
+  // let clr = [
+  //   "rgba(6, 182, 212, 0.5)",
+  //   "rgba(99, 102, 241, 0.5)",
+  //   "rgba(139, 92, 246, 0.5)",
+  //   "rgba(236, 72, 153, 0.5)",
+  //   "rgba(13, 121, 106, 0.88)",
+  // ];
   let clr = [
-    "rgba(6, 182, 212, 0.5)",
-    "rgba(99, 102, 241, 0.5)",
-    "rgba(139, 92, 246, 0.5)",
+    "rgba(41, 45, 45, 0.5)",
+    "rgba(75, 77, 78, 0.5)",
+    "rgba(90, 83, 106, 0.5)",
     "rgba(236, 72, 153, 0.5)",
-    "rgba(45, 212, 191, 0.5)",
+    "rgba(27, 29, 29, 0.5)",
   ];
   let sze = [16, 30, 20, 12, 56];
 
@@ -40,6 +47,8 @@ window.onload = function () {
       //   this.size = sze[Math.trunc(Math.random() * sze.length + 1)];
       this.speedX = (Math.random() - 0.5) * 3.5;
       this.speedY = (Math.random() - 0.5) * 3.5;
+      this.sy = this.speedY;
+      this.sx = this.speedX;
       this.color = clr[Math.trunc(Math.random() * clr.length + 1)];
       this.move = true;
       this.point = false;
@@ -53,15 +62,19 @@ window.onload = function () {
           this.size + this.x <= 0
         ) {
           this.speedX = -this.speedX;
+          this.sx = this.speedX;
         }
         if (
           this.size + this.y >= window.innerHeight ||
           this.size + this.y <= 0
         ) {
           this.speedY = -this.speedY;
+          this.sy = this.speedY;
         }
         this.x1 = this.x;
         this.y1 = this.y;
+        this.speedX = this.sx;
+        this.speedY = this.sy;
       }
       if (this.point) {
         this.x = touch.x;
@@ -92,7 +105,7 @@ window.onload = function () {
         if (distance < 100) {
           ctx.beginPath();
           ctx.strokeStyle = particlesArray[i].color;
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 3.5;
           ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
           ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
           ctx.stroke();
@@ -135,16 +148,18 @@ window.onload = function () {
           particlesArray[i].point = true;
           particlesArray[i].move = false;
           particlesArray[i].size = 12;
-        } else if(distance <= 80) {
-          particlesArray[i].speedX += nx;
-          particlesArray[i].speedY += ny;
-        }
-        else{
-            particlesArray[i].x = particlesArray[i].x1;
-            particlesArray[i].y = particlesArray[i].y1;
-            particlesArray[i].x += particlesArray[i].speedX;
-            particlesArray[i].y += particlesArray[i].speedY;
-
+        } else if (distance <= 80 && distance >= 5) {
+          particlesArray[i].speedX += 3.1 * nx;
+          particlesArray[i].speedY += 3.1 * ny;
+        } else {
+          // particlesArray[i].x = particlesArray[i].x1;
+          // particlesArray[i].y = particlesArray[i].y1;
+          particlesArray[i].point = false;
+          particlesArray[i].move = true;
+          // particlesArray[i].x += particlesArray[i].speedX;
+          // particlesArray[i].y += particlesArray[i].speedY;
+          // particlesArray[i].speedX = (Math.random() - 0.5) * 3.5;
+          // particlesArray[i].speedY = (Math.random() - 0.5) * 3.5;
         }
       }
     }
