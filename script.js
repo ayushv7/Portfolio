@@ -52,7 +52,17 @@ window.onload = function () {
       this.color = clr[Math.trunc(Math.random() * clr.length + 1)];
       this.move = true;
       this.point = false;
+      this.nx = null;
+      this.ny = null;
     }
+
+    nsn(nx1, ny1) {
+      this.speedX = 4.5 * nx1;
+      this.speedY = 4.5 * ny1;
+      this.x += this.speedX;
+      this.y += this.speedY;
+    }
+
     update() {
       if (this.move) {
         this.x += this.speedX;
@@ -77,10 +87,7 @@ window.onload = function () {
         this.speedY = this.sy;
       }
       if (this.point) {
-        this.x = touch.x;
-        this.y = touch.y;
-        this.speedX = 0;
-        this.speedY = 0;
+        this.nsn(this.nx, this.ny);
       }
     }
     draw() {
@@ -111,55 +118,23 @@ window.onload = function () {
           ctx.stroke();
           ctx.closePath();
         }
-        //      if(distance <= particlesArray[i].size + particlesArray[j].size){
-        //          let t1 = particlesArray[i].speedX;
-        //          let t2 = particlesArray[i].speedY;
-        //          particlesArray[i].speedY = particlesArray[j].speedY;
-        //          particlesArray[i].speedX  = particlesArray[j].speedX;
-        //          particlesArray[j].speedX = t1;
-        //          particlesArray[j].speedY = t2;
-
-        //      const overlap = (particlesArray[i].size + particlesArray[j].size) - distance;
-        // const nx = dx / distance; // Normal X
-        // const ny = dy / distance; // Normal Y
-
-        // //console.log(nx, ny)
-
-        // particlesArray[i].x += nx * overlap / 2;
-        // particlesArray[i].y += ny * overlap / 2;
-        // particlesArray[j].x -= nx * overlap / 2;
-        // particlesArray[j].y -= ny * overlap / 2;
-        //  }
       }
       const dx1 = touch.x - particlesArray[i].x;
       const dy1 = touch.y - particlesArray[i].y;
       const distance = Math.sqrt(dx1 * dx1 + dy1 * dy1);
       if (distance < 90) {
-        const nx = dx1 / distance; // Normal X
-        const ny = dy1 / distance; // Normal Y
-        document.addEventListener("click", function () {
-          particlesArray[i].point = false;
-          particlesArray[i].move = true;
-          particlesArray[i].size = 1;
-          touch.x = null;
-          touch.y = null;
-        });
-        if (distance <= 5) {
+        const nx = dx1 / distance;
+        const ny = dy1 / distance;
+        if (distance <= 25) {
+          particlesArray[i].nx = nx;
+          particlesArray[i].ny = ny;
           particlesArray[i].point = true;
           particlesArray[i].move = false;
-          particlesArray[i].size = 12;
-        } else if (distance <= 80 && distance >= 5) {
-          particlesArray[i].speedX += 3.1 * nx;
-          particlesArray[i].speedY += 3.1 * ny;
+          // particlesArray[i].speedX += 4.1 * nx;
+          // particlesArray[i].speedY += 4.1 * ny;
         } else {
-          // particlesArray[i].x = particlesArray[i].x1;
-          // particlesArray[i].y = particlesArray[i].y1;
           particlesArray[i].point = false;
           particlesArray[i].move = true;
-          // particlesArray[i].x += particlesArray[i].speedX;
-          // particlesArray[i].y += particlesArray[i].speedY;
-          // particlesArray[i].speedX = (Math.random() - 0.5) * 3.5;
-          // particlesArray[i].speedY = (Math.random() - 0.5) * 3.5;
         }
       }
     }
@@ -171,5 +146,6 @@ window.onload = function () {
     handleParticles();
     requestAnimationFrame(animate);
   }
+
   animate();
 };
