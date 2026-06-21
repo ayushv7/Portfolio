@@ -4,6 +4,7 @@ window.onload = function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  let pointer = document.getElementById("pointer");
   const particlesArray = [];
   let i = 0;
   // let clr = [
@@ -35,6 +36,16 @@ window.onload = function () {
   document.addEventListener("mousemove", function (e) {
     touch.x = e.x;
     touch.y = e.y;
+    pointer.style.left = e.x - 10 + "px";
+    pointer.style.top = e.y - 10 + "px";
+  });
+  document.addEventListener("mousedown", function () {
+    pointer.style.transition = '0.2s';
+    pointer.style.transform = 'scale(1.5)';
+  });
+  document.addEventListener("mouseup", function () {
+    pointer.style.transition = '0s';
+    pointer.style.transform = 'scale(1)';
   });
   class Particle {
     constructor() {
@@ -102,14 +113,12 @@ window.onload = function () {
   }
   function handleParticles() {
     for (let i = 0; i < particlesArray.length; i++) {
-      
-      particlesArray[1].color = 'lightblue';
-      particlesArray[1].x = touch.x;
-      particlesArray[1].y = touch.y;
+      particlesArray[0].color = "lightblue";
+      particlesArray[0].x = touch.x;
+      particlesArray[0].y = touch.y;
 
       particlesArray[i].update();
       particlesArray[i].draw();
-      
 
       for (let j = i + 1; j < particlesArray.length; j++) {
         const dx = particlesArray[i].x - particlesArray[j].x;
