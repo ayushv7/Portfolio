@@ -97,13 +97,19 @@ window.onload = function () {
       ctx.fill();
     }
   }
-  for (let i = 0; i < 310; i++) {
+  for (let i = 0; i < 510; i++) {
     particlesArray.push(new Particle());
   }
   function handleParticles() {
     for (let i = 0; i < particlesArray.length; i++) {
+      
+      particlesArray[1].color = 'lightblue';
+      particlesArray[1].x = touch.x;
+      particlesArray[1].y = touch.y;
+
       particlesArray[i].update();
       particlesArray[i].draw();
+      
 
       for (let j = i + 1; j < particlesArray.length; j++) {
         const dx = particlesArray[i].x - particlesArray[j].x;
@@ -125,7 +131,7 @@ window.onload = function () {
       if (distance < 90) {
         const nx = dx1 / distance;
         const ny = dy1 / distance;
-        if (distance <= 25) {
+        if (distance <= 35) {
           particlesArray[i].nx = nx;
           particlesArray[i].ny = ny;
           particlesArray[i].point = true;
