@@ -31,15 +31,16 @@ body {
   pointer-events: auto;
   inset: 0;
 }
-#pointer{
+#pointer {
   position: fixed;
   height: 20px;
   width: 20px;
   border-radius: 100px;
-  background-color: rgb(74, 216, 202);
+  background-color: rgba(74, 216, 202, 0.8);
   /* border:2px solid rgba(74, 216, 202, 0.012); */
   transition: 0s;
   z-index: 2;
+  pointer-events: none;
 }
 header {
   height: 50px;
@@ -81,10 +82,13 @@ header:hover {
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-user-select: none; 
+  -moz-user-select: none; /*
+  -ms-user-select: none; /*
+  user-select: none;
 }
 #main:hover {
   width: 1200px;
-  
 }
 section {
   height: 40%;
@@ -106,7 +110,7 @@ section:hover {
   backdrop-filter: blur(5px);
 }
 
-#main>div {
+#main > div {
   height: 80%;
   /* margin: auto 1rem auto 1rem; */
   margin: auto;
@@ -138,7 +142,7 @@ section:hover {
   align-content: center;
 }
 
-#des>p {
+#des > p {
   margin: auto;
   font-size: 20px;
   font-weight: 20px;
@@ -162,11 +166,15 @@ section:hover {
   opacity: 1;
   height: 100%;
   width: 97%;
-  border-radius: 30px;
+  border-radius: 130px;
   box-sizing: content-box;
   border: 10px solid rgba(255, 255, 255, 0.285);
+  transition: 0.3s;
 }
-
+#photobr img:hover {
+  border-radius: 50px;
+  box-shadow: 38px 38px 32px rgba(0, 0, 0, 0.768);
+}
 #name {
   flex: 1;
   height: 100%;

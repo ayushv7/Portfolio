@@ -40,7 +40,7 @@ window.onload = function () {
     pointer.style.top = e.y - 10 + "px";
   });
   document.addEventListener("mousedown", function () {
-    pointer.style.transition = '0.2s';
+    pointer.style.transition = '0.4s';
     pointer.style.transform = 'scale(1.5)';
   });
   document.addEventListener("mouseup", function () {
@@ -108,7 +108,7 @@ window.onload = function () {
       ctx.fill();
     }
   }
-  for (let i = 0; i < 510; i++) {
+  for (let i = 0; i < 310; i++) {
     particlesArray.push(new Particle());
   }
   function handleParticles() {
