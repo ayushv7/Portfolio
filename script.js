@@ -40,12 +40,12 @@ window.onload = function () {
     pointer.style.top = e.y - 10 + "px";
   });
   document.addEventListener("mousedown", function () {
-    pointer.style.transition = '0.4s';
-    pointer.style.transform = 'scale(1.5)';
+    pointer.style.transition = "0.4s";
+    pointer.style.transform = "scale(1.5)";
   });
   document.addEventListener("mouseup", function () {
-    pointer.style.transition = '0s';
-    pointer.style.transform = 'scale(1)';
+    pointer.style.transition = "0s";
+    pointer.style.transform = "scale(1)";
   });
   class Particle {
     constructor() {
@@ -111,46 +111,64 @@ window.onload = function () {
   for (let i = 0; i < 310; i++) {
     particlesArray.push(new Particle());
   }
+  let num = 0;
   function handleParticles() {
-    for (let i = 0; i < particlesArray.length; i++) {
-      particlesArray[0].color = "lightblue";
-      particlesArray[0].x = touch.x;
-      particlesArray[0].y = touch.y;
+    for (i = 0; i < particlesArray.length; i++) {
+      if (
+        particlesArray[i].x >= -5 &&
+        particlesArray[i].x <= canvas.width + 5 &&
+        particlesArray[i].y >= -5 &&
+        particlesArray[i].y <= canvas.height + 5
+      ) {
+        num += 1;
+        particlesArray[0].color = "lightblue";
+        particlesArray[0].x = touch.x;
+        particlesArray[0].y = touch.y;
 
-      particlesArray[i].update();
-      particlesArray[i].draw();
+        particlesArray[i].update();
+        particlesArray[i].draw();
 
-      for (let j = i + 1; j < particlesArray.length; j++) {
-        const dx = particlesArray[i].x - particlesArray[j].x;
-        const dy = particlesArray[i].y - particlesArray[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-          ctx.beginPath();
-          ctx.strokeStyle = particlesArray[i].color;
-          ctx.lineWidth = 3.5;
-          ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
-          ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
-          ctx.stroke();
-          ctx.closePath();
+        for (let j = i + 1; j < particlesArray.length; j++) {
+          const dx = particlesArray[i].x - particlesArray[j].x;
+          const dy = particlesArray[i].y - particlesArray[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.strokeStyle = particlesArray[i].color;
+            ctx.lineWidth = 3.5;
+            ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+            ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+            ctx.stroke();
+            ctx.closePath();
+          }
         }
+        const dx1 = touch.x - particlesArray[i].x;
+        const dy1 = touch.y - particlesArray[i].y;
+        const distance = Math.sqrt(dx1 * dx1 + dy1 * dy1);
+        if (distance < 90) {
+          const nx = dx1 / distance;
+          const ny = dy1 / distance;
+          if (distance <= 35) {
+            particlesArray[i].nx = nx;
+            particlesArray[i].ny = ny;
+            particlesArray[i].point = true;
+            particlesArray[i].move = false;
+            // particlesArray[i].speedX += 4.1 * nx;
+            // particlesArray[i].speedY += 4.1 * ny;
+          } else {
+            particlesArray[i].point = false;
+            particlesArray[i].move = true;
+          }
+        }
+      } else if(i !== 0) {
+        particlesArray.splice(i, 1);
       }
-      const dx1 = touch.x - particlesArray[i].x;
-      const dy1 = touch.y - particlesArray[i].y;
-      const distance = Math.sqrt(dx1 * dx1 + dy1 * dy1);
-      if (distance < 90) {
-        const nx = dx1 / distance;
-        const ny = dy1 / distance;
-        if (distance <= 35) {
-          particlesArray[i].nx = nx;
-          particlesArray[i].ny = ny;
-          particlesArray[i].point = true;
-          particlesArray[i].move = false;
-          // particlesArray[i].speedX += 4.1 * nx;
-          // particlesArray[i].speedY += 4.1 * ny;
-        } else {
-          particlesArray[i].point = false;
-          particlesArray[i].move = true;
-        }
+    }
+    console.log("current num: ", num);
+    console.log("particles length: ", particlesArray.length);
+    if (num <= 290) {
+      for (let i = 0; i <= 20; i++) {
+        particlesArray.push(new Particle());
       }
     }
   }
@@ -160,6 +178,7 @@ window.onload = function () {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     handleParticles();
     requestAnimationFrame(animate);
+    num = 0;
   }
 
   animate();
