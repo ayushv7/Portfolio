@@ -157,14 +157,14 @@ section:hover {
   background-color: rgba(255, 255, 255, 0.044);
 }
 
-#photobr {
+.photobr {
   /* background-color: rgb(0, 0, 0); */
   margin-top: 20px;
   flex: 3;
   height: 50%;
 }
 
-#photobr img {
+.photobr img {
   display: block;
   width: 60px;
   opacity: 1;
@@ -175,7 +175,7 @@ section:hover {
   border: 10px solid rgba(255, 255, 255, 0.285);
   transition: 0.3s;
 }
-#photobr img:hover {
+.photobr img:hover {
   border-radius: 50px;
   box-shadow: 38px 38px 32px rgba(0, 0, 0, 0.768);
 }

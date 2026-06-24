@@ -6,6 +6,8 @@ window.onload = function () {
   canvas.height = window.innerHeight;
   let pointer = document.getElementById("pointer");
   const particlesArray = [];
+  const clickbtn = document.querySelectorAll(".click");
+  const click = new Audio("/click.mp3");
   let i = 0;
   // let clr = [
   //   "rgba(6, 182, 212, 0.5)",
@@ -32,7 +34,11 @@ window.onload = function () {
     x: null,
     y: null,
   };
-
+  for (i = 0; i < clickbtn.length; i++) {
+    clickbtn[i].addEventListener("mouseenter", function () {
+      click.play();
+    });
+  }
   document.addEventListener("mousemove", function (e) {
     touch.x = e.x;
     touch.y = e.y;
@@ -160,7 +166,7 @@ window.onload = function () {
             particlesArray[i].move = true;
           }
         }
-      } else if(i !== 0) {
+      } else if (i !== 0) {
         particlesArray.splice(i, 1);
       }
     }
