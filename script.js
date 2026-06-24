@@ -4,7 +4,7 @@ window.onload = function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  let pointer = document.getElementById("pointer");
+  const pointer = document.getElementById("pointer");
   const particlesArray = [];
   const clickbtn = document.querySelectorAll(".click");
   const click = new Audio("/click.mp3");
@@ -37,6 +37,13 @@ window.onload = function () {
   for (i = 0; i < clickbtn.length; i++) {
     clickbtn[i].addEventListener("mouseenter", function () {
       click.play();
+      pointer.style.transition = "0.1s";
+      pointer.style.transform = 'scale(2)';
+    });
+    clickbtn[i].addEventListener("mouseleave", function () {
+      click.play();
+      pointer.style.transition = "0s";
+      pointer.style.transform = 'scale(1)';
     });
   }
   document.addEventListener("mousemove", function (e) {
