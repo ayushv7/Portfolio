@@ -121,7 +121,7 @@ window.onload = function () {
       ctx.fill();
     }
   }
-  for (let i = 0; i < 310; i++) {
+  for (let i = 0; i < 280; i++) {
     particlesArray.push(new Particle());
   }
   let num = 0;
@@ -179,7 +179,7 @@ window.onload = function () {
     }
     console.log("current num: ", num);
     console.log("particles length: ", particlesArray.length);
-    if (num <= 290) {
+    if (num <= 260) {
       for (let i = 0; i <= 20; i++) {
         particlesArray.push(new Particle());
       }
