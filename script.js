@@ -6,6 +6,7 @@ window.onload = function () {
   canvas.height = window.innerHeight;
   const pointer = document.getElementById("pointer");
   const particlesArray = [];
+  const header = document.querySelector('.header');
   const clickbtn = document.querySelectorAll(".click");
   const click = new Audio("/click.mp3");
   let i = 0;
@@ -29,7 +30,9 @@ window.onload = function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
-
+  if (window.scrollY != 0){
+    header.classList.add('phase2');
+  }
   const touch = {
     x: null,
     y: null,
