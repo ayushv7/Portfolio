@@ -30,9 +30,11 @@ window.onload = function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
-  if (window.scrollY != 0){
-    header.classList.add('phase2');
-  }
+  window.addEventListener('scroll', () => {
+    (window.scrollY >= 50) ?  header.classList.remove('phase2') : header.classList.add('phase2');
+    
+    
+  });
   const touch = {
     x: null,
     y: null,
@@ -180,8 +182,8 @@ window.onload = function () {
         particlesArray.splice(i, 1);
       }
     }
-    console.log("current num: ", num);
-    console.log("particles length: ", particlesArray.length);
+    // console.log("current num: ", num);
+    // console.log("particles length: ", particlesArray.length);
     if (num <= 260) {
       for (let i = 0; i <= 20; i++) {
         particlesArray.push(new Particle());
