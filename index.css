@@ -242,7 +242,7 @@ footer {
   padding: 10px 25px;
 }
 
-.skills {
+#skills {
   align-items: center;
   display: flex;
   flex-direction: column;
