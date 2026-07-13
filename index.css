@@ -9,8 +9,12 @@
   font-weight: 400;
   font-style: normal;
   cursor: none;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
 }
-
+*::-webkit-scrollbar {
+  display: none;
+}
 body {
   position: absolute;
   top: 0;
@@ -238,7 +242,7 @@ footer {
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 10px 25px;
 }
 
