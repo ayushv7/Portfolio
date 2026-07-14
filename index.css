@@ -73,7 +73,7 @@ header {
 }
 
 .phase2 {
-  width: 66vw;
+  width: 53vw;
 }
 
 .phase2 .dis{
@@ -84,7 +84,7 @@ header {
 header:hover {
   backdrop-filter: blur(17px);
   border-radius: 15px;
-  width: 66vw;
+  width: 53vw;
   background-color: rgba(255, 255, 255, 0.04);
   
 }
@@ -251,7 +251,16 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
+#projects {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#contacts {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 .top1 {
   margin-top: 20px;
   height: 25px;
