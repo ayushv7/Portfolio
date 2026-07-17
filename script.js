@@ -32,8 +32,6 @@ window.onload = function () {
   });
   window.addEventListener('scroll', () => {
     (window.scrollY >= 50) ?  header.classList.remove('phase2') : header.classList.add('phase2');
-    
-    
   });
   const touch = {
     x: null,
