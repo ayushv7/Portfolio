@@ -9,7 +9,7 @@
   font-weight: 400;
   font-style: normal;
   cursor: none;
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 *::-webkit-scrollbar {
@@ -48,7 +48,7 @@ body {
   background-color: rgba(255, 255, 255, 0.752);
   /* border:2px solid rgba(74, 216, 202, 0.012); */
   transition: 0s;
-  z-index: 3;;
+  z-index: 3;
   pointer-events: none;
 }
 header {
@@ -76,7 +76,7 @@ header {
   width: 53vw;
 }
 
-.phase2 .dis{
+.phase2 .dis {
   display: inline;
   transition: 0s;
 }
@@ -86,32 +86,29 @@ header:hover {
   border-radius: 15px;
   width: 53vw;
   background-color: rgba(255, 255, 255, 0.04);
-  
 }
-.header:hover .dis{
+.header:hover .dis {
   display: inline;
 }
-.innerbranch{
+.innerbranch {
   width: 100%;
   padding-left: 5px;
-
 }
 .dis {
   display: none;
   transition: 0s;
 }
-.innerbranch a{
+.innerbranch a {
   margin: 15px;
   text-decoration: none;
   height: 30px;
-  padding:5px 15px;
+  padding: 5px 15px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.innerbranch a:hover{
+.innerbranch a:hover {
   /* background-color: rgba(37, 125, 154, 0.448); */
   background-color: rgba(255, 255, 255, 0.423);
-  
 }
 #main {
   margin-top: 140px;
@@ -250,6 +247,30 @@ footer {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: auto;
+  padding: 25px;
+  padding-bottom: 70px;
+}
+.bottom1 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 30px;
+}
+.ss {
+  height: 200px;
+  width: 170px;
+  padding: 14px;
+  box-shadow:
+  0 8px 32px rgba(0, 0, 0, 0.2),
+  inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  align-items: center;
+  text-align: center;
+}
+.ss:hover{
+  background-color: rgba(255, 255, 255, 0.049);
+  
 }
 #projects {
   align-items: center;
