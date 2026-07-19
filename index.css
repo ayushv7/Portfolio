@@ -272,6 +272,21 @@ footer {
   background-color: rgba(255, 255, 255, 0.049);
   
 }
+.ps {
+  height: 200px;
+  width: 170px;
+  padding: 14px;
+  box-shadow:
+  0 8px 32px rgba(0, 0, 0, 0.2),
+  inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  align-items: center;
+  text-align: center;
+}
+.ps:hover{
+  background-color: rgba(255, 255, 255, 0.049);
+  
+}
 #projects {
   align-items: center;
   display: flex;
