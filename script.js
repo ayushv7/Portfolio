@@ -12,7 +12,7 @@ window.onload = function () {
   const click = new Audio("/click.mp3");
   const boxclick = new Audio("/divisionclick.mp3");
   const boxhover = new Audio("/cardhover.mp3");
-  boxclick.volume = 0.14;
+  boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
   // let clr = [
@@ -59,6 +59,9 @@ window.onload = function () {
   for (i = 0; i < box.length; i++) {
     box[i].addEventListener("click", function () {
     boxclick.play();
+    });
+    box[i].addEventListener("mouseenter", function () {
+    boxhover.play();
     });
   }
   document.addEventListener("mousemove", function (e) {
