@@ -6,9 +6,14 @@ window.onload = function () {
   canvas.height = window.innerHeight;
   const pointer = document.getElementById("pointer");
   const particlesArray = [];
-  const header = document.querySelector('.header');
+  const header = document.querySelector(".header");
   const clickbtn = document.querySelectorAll(".click");
+  const box = document.querySelectorAll(".ss");
   const click = new Audio("/click.mp3");
+  const boxclick = new Audio("/divisionclick.mp3");
+  const boxhover = new Audio("/cardhover.mp3");
+  boxclick.volume = 0.14;
+  click.volume = 0.25;
   let i = 0;
   // let clr = [
   //   "rgba(6, 182, 212, 0.5)",
@@ -30,8 +35,10 @@ window.onload = function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
-  window.addEventListener('scroll', () => {
-    (window.scrollY >= 50) ?  header.classList.remove('phase2') : header.classList.add('phase2');
+  window.addEventListener("scroll", () => {
+    window.scrollY >= 50
+      ? header.classList.remove("phase2")
+      : header.classList.add("phase2");
   });
   const touch = {
     x: null,
@@ -41,12 +48,17 @@ window.onload = function () {
     clickbtn[i].addEventListener("mouseenter", function () {
       click.play();
       pointer.style.transition = "0.1s";
-      pointer.style.transform = 'scale(2)';
+      pointer.style.transform = "scale(2)";
     });
     clickbtn[i].addEventListener("mouseleave", function () {
       click.play();
       pointer.style.transition = "0s";
-      pointer.style.transform = 'scale(1)';
+      pointer.style.transform = "scale(1)";
+    });
+  }
+  for (i = 0; i < box.length; i++) {
+    box[i].addEventListener("click", function () {
+    boxclick.play();
     });
   }
   document.addEventListener("mousemove", function (e) {
