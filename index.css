@@ -279,7 +279,7 @@ footer {
 }
 .ps {
   height: 200px;
-  width: 170px;
+  width: 130px;
   padding: 14px;
   box-shadow:
   0 8px 32px rgba(0, 0, 0, 0.2),
@@ -290,12 +290,16 @@ footer {
 }
 .ps:hover{
   background-color: rgba(255, 255, 255, 0.049);
+  width: 140px;
   
 }
 #projects {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: auto;
+  padding: 25px;
+  padding-bottom: 70px;
 }
 #contacts {
   align-items: center;
