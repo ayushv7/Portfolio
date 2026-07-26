@@ -9,9 +9,10 @@ window.onload = function () {
   const header = document.querySelector(".header");
   const clickbtn = document.querySelectorAll(".click");
   const box = document.querySelectorAll(".ss");
+  const box2 = document.querySelectorAll(".ps");
   const click = new Audio("/click.mp3");
   const boxclick = new Audio("/divisionclick.mp3");
-  const boxhover = new Audio("/cardhover.mp3");
+  const boxhover = new Audio("/hoverbox.mp3");
   boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
@@ -61,6 +62,14 @@ window.onload = function () {
     boxclick.play();
     });
     box[i].addEventListener("mouseenter", function () {
+    boxhover.play();
+    });
+  }
+  for (i = 0; i < box2.length; i++) {
+    box2[i].addEventListener("click", function () {
+    boxclick.play();
+    });
+    box2[i].addEventListener("mouseenter", function () {
     boxhover.play();
     });
   }
