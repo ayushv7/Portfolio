@@ -242,8 +242,23 @@ footer {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.footer-content p{
+  text-align: center;
+}
+.footer-links{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding-top: 20px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 #skills {
   align-items: center;
   display: flex;
