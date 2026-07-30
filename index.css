@@ -248,6 +248,7 @@ footer {
 }
 .footer-content p{
   text-align: center;
+  padding-top: 20px;
 }
 .footer-links{
   display: flex;
