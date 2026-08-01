@@ -341,9 +341,8 @@ a {
   padding-bottom: 70px;
 }
 #contacts {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  /* align-items: center; */
+  height: auto;
 }
 .top1 {
   margin-top: 20px;
@@ -360,4 +359,136 @@ a {
 .top1:hover {
   background-color: rgba(255, 255, 255, 0.14);
   transform: scale(1.1);
+}
+
+
+
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 50px;
+  font-family: system-ui, sans-serif;
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 450px;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-info > p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.info-item {
+  margin-bottom: 1.5rem;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  font-size: 1.1rem;
+  color: #bbb0b0;
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 700;
+  transition: color 0.2s ease;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 11px;
+  transition: 0.5s;
+}
+
+.social-links a:hover {
+  color: #39a1af;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 11px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ccc9c9;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: none;
+  box-shadow: 0 0 0 3px rgba(246, 247, 247, 0.15);
+  background-color: #ffffff2f;
+  border-radius: 9px;
+}
+
+.submit-btn {
+  background-color: transparent;
+  backdrop-filter: blur(9px);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background-color: #ffffff1b;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
 }
