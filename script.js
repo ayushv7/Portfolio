@@ -223,7 +223,7 @@ window.onload = function () {
 
   animate();
 
-  document.getElementById('theme').addEventListener('click', function(){
+  document.querySelector('.theme').addEventListener('click', function(){
 
   });
 };
