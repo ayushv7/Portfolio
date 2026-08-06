@@ -493,3 +493,11 @@ a {
 .submit-btn:active {
   transform: scale(0.98);
 }
+
+#theme-modal{
+  position: absolute;
+  height: 100dvh;
+  width: 100dvw;
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
