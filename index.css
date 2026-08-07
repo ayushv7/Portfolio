@@ -246,11 +246,11 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-.footer-content p{
+.footer-content p {
   text-align: center;
   padding-top: 20px;
 }
-.footer-links{
+.footer-links {
   display: flex;
   flex-direction: row;
   gap: 50px;
@@ -361,9 +361,6 @@ a {
   transform: scale(1.1);
 }
 
-
-
-
 .contact-container {
   display: flex;
   flex-direction: row;
@@ -375,7 +372,8 @@ a {
   font-family: system-ui, sans-serif;
 }
 
-.contact-info, .contact-form {
+.contact-info,
+.contact-form {
   flex: 1 1 450px;
 }
 
@@ -457,7 +455,9 @@ a {
   border-radius: 6px;
   font-size: 1rem;
   background-color: transparent;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
   text-align: left !important;
 }
 
@@ -483,7 +483,9 @@ a {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 .submit-btn:hover {
@@ -494,10 +496,19 @@ a {
   transform: scale(0.98);
 }
 
-#theme-modal{
+#theme-modal {
   position: absolute;
   height: 100dvh;
   width: 100dvw;
   backdrop-filter: blur(2px);
   z-index: 5;
+}
+.selectarea{
+  padding: 20px;
+  border-radius: 9px;
+  background-color: #39a1af;
+  width: auto;
+}
+.selectarea button {
+  padding: 10px;
 }
