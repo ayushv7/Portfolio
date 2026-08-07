@@ -49,7 +49,7 @@ body {
   background-color: rgba(255, 255, 255, 0.752);
   /* border:2px solid rgba(74, 216, 202, 0.012); */
   transition: 0s;
-  z-index: 3;
+  z-index: 6;
   pointer-events: none;
 }
 header {
@@ -497,18 +497,41 @@ a {
 }
 
 #theme-modal {
-  position: absolute;
+  position: fixed;
   height: 100dvh;
   width: 100dvw;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(7px);
   z-index: 5;
+  display: flex;
+  align-items: center;
 }
 .selectarea{
   padding: 20px;
-  border-radius: 9px;
-  background-color: #39a1af;
-  width: auto;
+  border-radius: 17px;
+  /* background-color: #39a1af; */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  width: fit-content;
+  margin: auto;
 }
-.selectarea button {
+.selectarea:hover{
+  transform: scale(1.01);
+  background-color: rgba(246, 247, 247, 0.058);
+}
+.selectarea > button {
   padding: 10px;
+  border-radius: 9px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  margin: 0 8px;
+}
+.selectarea > button:hover{
+  transform: scale(1.1);
+  background-color: rgba(246, 247, 247, 0.139);
 }
