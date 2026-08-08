@@ -13,6 +13,10 @@ window.onload = function () {
   const click = new Audio("/click.mp3");
   const boxclick = new Audio("/divisionclick.mp3");
   const boxhover = new Audio("/hoverbox.mp3");
+  const darkmd = document.querySelector('.darkmd');
+  const lightmd = document.querySelector('.lightmd');
+  const themebtn = document.querySelector('.theme');
+  const thememodal = document.querySelector('.theme-modal');
   boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
@@ -78,6 +82,16 @@ window.onload = function () {
     touch.y = e.y;
     pointer.style.left = e.x - 10 + "px";
     pointer.style.top = e.y - 10 + "px";
+  });
+  themebtn.addEventListener('click', () => {
+    thememodal.classList.toggle('hidden');
+  });
+
+  thememodal.addEventListener('click', (e) => {
+    if(e.target !== e.currentTarget){
+      return;
+    }
+    thememodal.classList.toggle('hidden');
   });
   document.addEventListener("mousedown", function () {
     pointer.style.transition = "0.4s";

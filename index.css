@@ -496,16 +496,17 @@ a {
   transform: scale(0.98);
 }
 
-#theme-modal {
+.theme-modal {
   position: fixed;
   height: 100dvh;
   width: 100dvw;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(17px);
   z-index: 5;
-  display: flex;
+  display: none;
   align-items: center;
 }
 .selectarea{
+  position: absolute;
   padding: 20px;
   border-radius: 17px;
   /* background-color: #39a1af; */
@@ -514,6 +515,8 @@ a {
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   width: fit-content;
+  left: 0;
+  right: 0;
   margin: auto;
 }
 .selectarea:hover{
@@ -534,4 +537,7 @@ a {
 .selectarea > button:hover{
   transform: scale(1.1);
   background-color: rgba(246, 247, 247, 0.139);
+}
+.hidden{
+  display: flex;
 }
