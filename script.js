@@ -32,8 +32,16 @@ window.onload = function () {
   ];
   let sze = [16, 30, 20, 12, 56];
 
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("phase2", window.scrollY <= 50);
+  document.querySelector(".root").addEventListener("scroll", (e) => {
+    const scrollTop =
+      e.target.scrollTop ||
+      window.scrollY ||
+      document.documentElement.scrollTop;
+    if (scrollTop > 50) {
+      header.classList.add("phase2");
+    } else {
+      header.classList.remove("phase2");
+    }
   });
   const touch = {
     x: null,
