@@ -28,7 +28,25 @@ body {
   background: transparent;
   overflow-x: hidden;
 }
-
+.root{
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: transparent;
+  overflow-x: hidden;
+}
+.settingspg{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: transparent;
+  overflow-x: hidden;
+}
 #canvas {
   position: fixed;
   z-index: 0;
