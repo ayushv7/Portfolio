@@ -40,6 +40,7 @@ body {
   z-index: 1;
 }
 .settingspg{
+  display: none;
   position: absolute;
   top: 0;
   height: 100%;

@@ -15,6 +15,7 @@ window.onload = function () {
   const thememodal = document.querySelector(".theme-modal");
   const settingpage = document.querySelector(".settingspg");
   const settingbtn = document.querySelector(".settings-btn");
+  const root = document.querySelector(".root");
   boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
@@ -40,9 +41,9 @@ window.onload = function () {
       window.scrollY ||
       document.documentElement.scrollTop;
     if (scrollTop > 50) {
-      header.classList.add("phase2");
-    } else {
       header.classList.remove("phase2");
+    } else {
+      header.classList.add("phase2");
     }
   });
   const touch = {
@@ -93,6 +94,14 @@ window.onload = function () {
     }
     thememodal.classList.toggle("hidden");
   });
+
+  settingbtn.addEventListener("click", () =>{
+    if (root.style.display !== 'none') {
+      settingpage.style.display = 'flex';
+      root.style.display = 'none';
+  }
+  });
+
   document.addEventListener("mousedown", function () {
     pointer.style.transition = "0.4s";
     pointer.style.transform = "scale(1.5)";
