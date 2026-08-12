@@ -490,6 +490,11 @@ a {
   border-radius: 9px;
 }
 
+/* .form-group input:hover,
+.form-group textarea:hover {
+  cursor: pointer;
+} */
+
 .submit-btn {
   background-color: transparent;
   backdrop-filter: blur(9px);
