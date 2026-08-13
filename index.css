@@ -69,7 +69,7 @@ body {
   background-color: rgba(255, 255, 255, 0.752);
   /* border:2px solid rgba(74, 216, 202, 0.012); */
   transition: 0s;
-  z-index: 6;
+  z-index: 9;
   pointer-events: none;
 }
 .header {
@@ -565,4 +565,31 @@ a {
 }
 .hidden{
   display: flex;
+}
+
+.scover{
+  width: 100vw;
+  display: flex;
+  gap: 2rem;
+  padding: 5rem;
+}
+.sright{
+  height: 80dvh;
+  flex: 3;
+  border-radius: 2rem;
+  backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.sleft{
+  height: 80dvh;
+  flex: 1;
+  border-radius: 2rem;
+  backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
