@@ -59,6 +59,7 @@ body {
   left: 0;
   pointer-events: auto;
   inset: 0;
+  /* filter: contrast(150); */
 }
 #pointer {
   position: fixed;

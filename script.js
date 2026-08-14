@@ -95,11 +95,11 @@ window.onload = function () {
     thememodal.classList.toggle("hidden");
   });
 
-  settingbtn.addEventListener("click", () =>{
-    if (root.style.display !== 'none') {
-      settingpage.style.display = 'flex';
-      root.style.display = 'none';
-  }
+  settingbtn.addEventListener("click", () => {
+    if (root.style.display !== "none") {
+      settingpage.style.display = "flex";
+      root.style.display = "none";
+    }
   });
 
   document.addEventListener("mousedown", function () {
@@ -125,11 +125,11 @@ window.onload = function () {
         this.y = Math.random() * window.innerHeight;
         this.x1;
         this.y1;
-        //   this.size = Math.random() * 24 + 1;
-        this.size = 1;
+        this.size = Math.random() * 24 + 1;
+        // this.size = 1;
         //   this.size = sze[Math.trunc(Math.random() * sze.length + 1)];
-        this.speedX = (Math.random() - 0.5) * 3.5;
-        this.speedY = (Math.random() - 0.5) * 3.5;
+        this.speedX = (Math.random() - 0.5) * 1.01;
+        this.speedY = (Math.random() - 0.5) * 1.01;
         this.sy = this.speedY;
         this.sx = this.speedX;
         this.color = clr[Math.trunc(Math.random() * clr.length + 1)];
@@ -140,8 +140,8 @@ window.onload = function () {
       }
 
       nsn(nx1, ny1) {
-        this.speedX = 4.5 * nx1;
-        this.speedY = 4.5 * ny1;
+        this.speedX = 1.01 * nx1;
+        this.speedY = 1.01 * ny1;
         this.x += this.speedX;
         this.y += this.speedY;
       }
@@ -180,7 +180,7 @@ window.onload = function () {
         ctx.fill();
       }
     }
-    for (let i = 0; i < 280; i++) {
+    for (let i = 0; i < 150; i++) {
       particlesArray.push(new Particle());
     }
     let num = 0;
@@ -207,7 +207,7 @@ window.onload = function () {
             if (distance < 100) {
               ctx.beginPath();
               ctx.strokeStyle = particlesArray[i].color;
-              ctx.lineWidth = 3.5;
+              ctx.lineWidth = 4.5;
               ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
               ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
               ctx.stroke();
@@ -238,7 +238,7 @@ window.onload = function () {
       }
       // console.log("current num: ", num);
       // console.log("particles length: ", particlesArray.length);
-      if (num <= 260) {
+      if (num <= 120) {
         for (let i = 0; i <= 20; i++) {
           particlesArray.push(new Particle());
         }
