@@ -125,8 +125,8 @@ window.onload = function () {
         this.y = Math.random() * window.innerHeight;
         this.x1;
         this.y1;
-        this.size = Math.random() * 24 + 1;
-        // this.size = 1;
+        // this.size = Math.random() * 24 + 1;
+        this.size = 1;
         //   this.size = sze[Math.trunc(Math.random() * sze.length + 1)];
         this.speedX = (Math.random() - 0.5) * 1.01;
         this.speedY = (Math.random() - 0.5) * 1.01;
