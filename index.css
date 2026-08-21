@@ -28,7 +28,7 @@ body {
   background: transparent;
   overflow-x: hidden;
 }
-.root{
+.root {
   /* display: none; */
   position: absolute;
   top: 0;
@@ -39,7 +39,7 @@ body {
   overflow-x: hidden;
   z-index: 1;
 }
-.settingspg{
+.settingspg {
   display: none;
   position: absolute;
   top: 0;
@@ -531,7 +531,7 @@ a {
   display: none;
   align-items: center;
 }
-.selectarea{
+.selectarea {
   position: absolute;
   padding: 20px;
   border-radius: 2rem;
@@ -545,7 +545,7 @@ a {
   right: 0;
   margin: auto;
 }
-.selectarea:hover{
+.selectarea:hover {
   transform: scale(1.01);
   background-color: rgba(246, 247, 247, 0.058);
 }
@@ -560,21 +560,21 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   margin: 0 8px;
 }
-.selectarea > button:hover{
+.selectarea > button:hover {
   transform: scale(1.1);
   background-color: rgba(246, 247, 247, 0.139);
 }
-.hidden{
+.hidden {
   display: flex;
 }
 
-.scover{
+.scover {
   width: 100vw;
   display: flex;
   gap: 2rem;
   padding: 5rem;
 }
-.sright{
+.sright {
   height: 80dvh;
   flex: 3;
   border-radius: 2rem;
@@ -584,9 +584,10 @@ a {
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-.sleft{
+.sleft {
   height: 80dvh;
   flex: 1;
+  /* background-color: #fbf9f9; */
   border-radius: 2rem;
   backdrop-filter: blur(9px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -594,8 +595,34 @@ a {
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-.btn-cvr{
-  height: 97%;
-  width: 97%;
-  
+.btn-cvr {
+  height: 93%;
+  width: 88%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* background-color: #39a1af; */
+  padding: 1em;
+  padding-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.btn-cvr > button {
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 1em;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.btn-cvr > button:hover{
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.121);
 }

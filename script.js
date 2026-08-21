@@ -4,8 +4,7 @@ window.onload = function () {
   const particlesArray = [];
   const header = document.querySelector(".header");
   const clickbtn = document.querySelectorAll(".click");
-  const box = document.querySelectorAll(".ss");
-  const box2 = document.querySelectorAll(".ps");
+  const box = document.querySelectorAll(".hov");
   const click = new Audio("/click.mp3");
   const boxclick = new Audio("/divisionclick.mp3");
   const boxhover = new Audio("/hoverbox.mp3");
@@ -67,14 +66,6 @@ window.onload = function () {
       boxclick.play();
     });
     box[i].addEventListener("mouseenter", function () {
-      boxhover.play();
-    });
-  }
-  for (i = 0; i < box2.length; i++) {
-    box2[i].addEventListener("click", function () {
-      boxclick.play();
-    });
-    box2[i].addEventListener("mouseenter", function () {
       boxhover.play();
     });
   }
