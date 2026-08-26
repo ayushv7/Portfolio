@@ -320,6 +320,12 @@ a {
 .ss > img {
   border-radius: 2rem;
 }
+.ss > h2 {
+  margin-top: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .ps {
   /* height: 70px; */
   height: auto;
@@ -340,6 +346,12 @@ a {
 }
 .ps > img {
   border-radius: 2rem;
+}
+.ps > h2{
+  margin-top: 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .pp1 {
   display: flex;
