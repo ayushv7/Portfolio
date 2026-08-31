@@ -650,5 +650,5 @@ a {
   transition: 0.5s;
 }
 .btn-cvr > button:hover::before{
-  opacity: 0.6;
+  opacity: 0.4;
 }
