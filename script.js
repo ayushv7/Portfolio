@@ -86,6 +86,9 @@ window.onload = function () {
     thememodal.classList.toggle("hidden");
   });
 
+  lightmd.addEventListener("click", function(){
+//
+  });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
       settingpage.style.display = "flex";
