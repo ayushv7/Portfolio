@@ -15,6 +15,7 @@ window.onload = function () {
   const settingpage = document.querySelector(".settingspg");
   const settingbtn = document.querySelector(".settings-btn");
   const root = document.querySelector(".root");
+  let mode = true;
   boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
@@ -87,7 +88,7 @@ window.onload = function () {
   });
 
   lightmd.addEventListener("click", function(){
-//
+    mode = false;
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
