@@ -1,5 +1,6 @@
 :root{
   --maincolor: #ffffff;
+  --bordermaincolor:#ffffff;
 }
 * {
   border: 0;

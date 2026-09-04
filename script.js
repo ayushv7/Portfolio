@@ -91,6 +91,11 @@ window.onload = function () {
     document.querySelector(".can1").style.display = "none";
     document.querySelector(".can2").style.display = "none";
     document.documentElement.style.setProperty("--maincolor", "#000");
+    document.querySelector('.header').style.border = '1px solid orange';
+    document.querySelectorAll('.headbtn').forEach((btn) => {
+      btn.style.border = '1px solid orange';
+    })
+
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
