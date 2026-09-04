@@ -1,8 +1,11 @@
+:root{
+  --maincolor: #ffffff;
+}
 * {
   border: 0;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--maincolor);
   transition: 0.2s;
   /* z-index: 1; */
   font-family: "Croissant One", serif;
@@ -413,7 +416,7 @@ a {
 .contact-info h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--maincolor);
 }
 
 .contact-info > p {
@@ -431,7 +434,7 @@ a {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
+  color: var(--maincolor);
   margin-bottom: 0.25rem;
 }
 
@@ -452,7 +455,7 @@ a {
   color: #f8f9fa;
   font-weight: 700;
   transition: color 0.2s ease;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--maincolor);
   border-radius: 2rem;
   padding: 11px;
   transition: 0.5s;
@@ -460,7 +463,7 @@ a {
 
 .social-links a:hover {
   color: #39a1af;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--maincolor);
   border-radius: 2rem;
   padding: 11px;
 }
@@ -511,7 +514,7 @@ a {
 .submit-btn {
   background-color: transparent;
   backdrop-filter: blur(9px);
-  color: white;
+  color: var(--maincolor);
   padding: 0.8rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
@@ -564,7 +567,7 @@ a {
 .selectarea > button {
   padding: 10px;
   border-radius: 2rem;
-  color: rgb(255, 255, 255);
+  color: var(--maincolor);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
@@ -621,7 +624,7 @@ a {
   gap: 12px;
 }
 .btn-cvr > button {
-  color: #ffffff;
+  color: var(--maincolor);
   font-size: 1.2rem;
   padding: 1em;
   border-radius: 30px;

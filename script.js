@@ -86,10 +86,11 @@ window.onload = function () {
     thememodal.classList.toggle("hidden");
   });
 
-  lightmd.addEventListener("click", function(){
-    console.log('clicked');
-    document.querySelector('.can1').style.display = 'none';
-    document.querySelector('.can2').style.display = 'none';
+  lightmd.addEventListener("click", function () {
+    console.log("clicked");
+    document.querySelector(".can1").style.display = "none";
+    document.querySelector(".can2").style.display = "none";
+    document.documentElement.style.setProperty("--maincolor", "#000");
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
