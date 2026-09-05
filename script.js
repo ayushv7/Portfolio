@@ -95,7 +95,7 @@ window.onload = function () {
     document.querySelectorAll('.headbtn').forEach((btn) => {
       btn.style.border = '1px solid orange';
     })
-
+    document.querySelector('#main').style.border = '1px solid orange';
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
