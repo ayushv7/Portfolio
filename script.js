@@ -98,6 +98,8 @@ window.onload = function () {
     document.querySelector('#main').style.border = '1px solid orange';
     document.querySelector('#skills').style.border = '2px solid orange';
     document.querySelector('#projects').style.border = '2px solid orange';
+    document.querySelector('#contacts').style.border = '2px solid orange';
+
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
