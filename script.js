@@ -99,7 +99,7 @@ window.onload = function () {
     document.querySelector('#skills').style.border = '2px solid orange';
     document.querySelector('#projects').style.border = '2px solid orange';
     document.querySelector('#contacts').style.border = '2px solid orange';
-    document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.2)';
+    document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
 
   });
   settingbtn.addEventListener("click", () => {
