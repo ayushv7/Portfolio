@@ -25,11 +25,11 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  /* background: url("/bg.png"); */
-  /* background-repeat: no-repeat; */
+  background: url("/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background-attachment: fixed; */
   margin: 0;
-  background: transparent;
   overflow-x: hidden;
 }
 .root {
