@@ -91,15 +91,15 @@ window.onload = function () {
     document.querySelector(".can1").style.display = "none";
     document.querySelector(".can2").style.display = "none";
     document.documentElement.style.setProperty("--maincolor", "#000");
-    document.querySelector('.header').style.border = '1px solid orange';
+    document.querySelector('.header').style.border = '1px solid lightblue';
     document.querySelectorAll('.headbtn').forEach((btn) => {
-      btn.style.border = '1px solid orange';
+      btn.style.border = '1px solid lightblue';
     })
-    document.querySelector('#main').style.border = '1px solid orange';
-    document.querySelector('#skills').style.border = '2px solid orange';
-    document.querySelector('#projects').style.border = '2px solid orange';
-    document.querySelector('#contacts').style.border = '2px solid orange';
-    document.querySelector('.scover').style.border = '2px solid orange';
+    document.querySelector('#main').style.border = '1px solid lightblue';
+    document.querySelector('#skills').style.border = '2px solid lightblue';
+    document.querySelector('#projects').style.border = '2px solid lightblue';
+    document.querySelector('#contacts').style.border = '2px solid lightblue';
+    document.querySelector('.scover').style.border = '2px solid lightblue';
     document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
 
   });
