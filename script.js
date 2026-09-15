@@ -87,7 +87,7 @@ window.onload = function () {
   });
 
   lightmd.addEventListener("click", function () {
-    console.log("clicked");
+    // console.log("clicked");
     document.querySelector(".can1").style.display = "none";
     document.querySelector(".can2").style.display = "none";
     document.documentElement.style.setProperty("--maincolor", "#000");
@@ -101,6 +101,23 @@ window.onload = function () {
     document.querySelector('#contacts').style.border = '2px solid lightblue';
     document.querySelector('.scover').style.border = '2px solid lightblue';
     document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
+
+  });
+  darkmd.addEventListener("click", function () {
+    // console.log("clicked");
+    document.querySelector(".can1").style.display = "block";
+    document.querySelector(".can2").style.display = "block";
+    document.documentElement.style.setProperty("--maincolor", "#fff");
+    document.querySelector('.header').style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    document.querySelectorAll('.headbtn').forEach((btn) => {
+      btn.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    })
+    document.querySelector('#main').style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    document.querySelector('#skills').style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    document.querySelector('#projects').style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    document.querySelector('#contacts').style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    document.querySelector('.scover').style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 255, 255, 0.752)';
 
   });
   settingbtn.addEventListener("click", () => {
