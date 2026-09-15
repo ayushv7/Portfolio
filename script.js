@@ -100,7 +100,9 @@ window.onload = function () {
     document.querySelector('#projects').style.border = '2px solid lightblue';
     document.querySelector('#contacts').style.border = '2px solid lightblue';
     document.querySelector('.scover').style.border = '2px solid lightblue';
-    document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
+    // document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
+    document.querySelector('#pointer').style.background = 'transparent';
+    document.querySelector("#pointer").style.border = '3px solid rgba(10, 153, 139, 0.525)';
 
   });
   darkmd.addEventListener("click", function () {

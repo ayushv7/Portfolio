@@ -65,6 +65,7 @@ body {
   inset: 0;
   /* filter: contrast(150); */
 }
+
 #pointer {
   position: fixed;
   height: 25px;
