@@ -91,40 +91,50 @@ window.onload = function () {
     document.querySelector(".can1").style.display = "none";
     document.querySelector(".can2").style.display = "none";
     document.documentElement.style.setProperty("--maincolor", "#000");
-    document.querySelector('.header').style.border = '1px solid lightblue';
-    document.querySelectorAll('.headbtn').forEach((btn) => {
-      btn.style.border = '1px solid lightblue';
-    })
-    document.querySelector('#main').style.border = '1px solid lightblue';
-    document.querySelector('#skills').style.border = '2px solid lightblue';
-    document.querySelector('#projects').style.border = '2px solid lightblue';
-    document.querySelector('#contacts').style.border = '2px solid lightblue';
-    document.querySelector('.scover').style.border = '2px solid lightblue';
+    document.querySelector(".header").style.border = "1px solid lightblue";
+    document.querySelectorAll(".headbtn").forEach((btn) => {
+      btn.style.border = "1px solid lightblue";
+    });
+    document.querySelector("#main").style.border = "1px solid lightblue";
+    document.querySelector("#skills").style.border = "2px solid lightblue";
+    document.querySelector("#projects").style.border = "2px solid lightblue";
+    document.querySelector("#contacts").style.border = "2px solid lightblue";
+    document.querySelector(".scover").style.border = "2px solid lightblue";
     // document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
-    document.querySelector('#pointer').style.background = 'transparent';
-    document.querySelector("#pointer").style.border = '3px solid rgba(10, 153, 139, 0.525)';
-
+    document.querySelector("#pointer").style.background = "transparent";
+    document.querySelector("#pointer").style.border =
+      "3px solid rgba(10, 153, 139, 0.525)";
   });
   darkmd.addEventListener("click", function () {
     // console.log("clicked");
     document.querySelector(".can1").style.display = "block";
     document.querySelector(".can2").style.display = "block";
     document.documentElement.style.setProperty("--maincolor", "#fff");
-    document.querySelector('.header').style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    document.querySelectorAll('.headbtn').forEach((btn) => {
-      btn.style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    })
-    document.querySelector('#main').style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    document.querySelector('#skills').style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    document.querySelector('#projects').style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    document.querySelector('#contacts').style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    document.querySelector('.scover').style.border = '1px solid rgba(255, 255, 255, 0.1)';
-    document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 255, 255, 0.752)';
-
+    document.querySelector(".header").style.border =
+      "1px solid rgba(255, 255, 255, 0.1)";
+    document.querySelectorAll(".headbtn").forEach((btn) => {
+      btn.style.border = "1px solid rgba(255, 255, 255, 0.1)";
+    });
+    document.querySelector("#main").style.border =
+      "1px solid rgba(255, 255, 255, 0.1)";
+    document.querySelector("#skills").style.border =
+      "1px solid rgba(255, 255, 255, 0.1)";
+    document.querySelector("#projects").style.border =
+      "1px solid rgba(255, 255, 255, 0.1)";
+    document.querySelector("#contacts").style.border =
+      "1px solid rgba(255, 255, 255, 0.1)";
+    document.querySelector(".scover").style.border =
+      "1px solid rgba(255, 255, 255, 0.1)";
+    document.querySelector("#pointer").style.backgroundColor =
+      "rgba(255, 255, 255, 0.752)";
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
       settingpage.style.display = "flex";
+      const state = { page: "settings" };
+      const title = "settings page";
+      const newUrl = "/settings";
+      window.history.pushState(state, title, newUrl);
       root.style.display = "none";
     }
   });
