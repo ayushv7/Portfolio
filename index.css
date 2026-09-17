@@ -48,10 +48,21 @@ body {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   background: transparent;
   overflow-x: hidden;
+}
+.settcvr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 100%;
+  width: 80vw;
+  margin: 0;
+  background: transparent;
+  overflow-x: none;
 }
 .canvasbg {
   position: fixed;

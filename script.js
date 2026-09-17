@@ -130,11 +130,7 @@ window.onload = function () {
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
-      settingpage.style.display = "flex";
-      const state = { page: "settings" };
-      const title = "settings page";
-      const newUrl = "/settings";
-      window.history.pushState(state, title, newUrl);
+      settingpage.style.display = "block";
       root.style.display = "none";
     }
   });
