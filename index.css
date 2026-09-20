@@ -54,14 +54,14 @@ body {
   overflow-x: hidden;
 }
 .settcvr {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   top: 0;
-  height: 100%;
+  height: 30px;
   width: 80vw;
   margin: 0;
-  background: transparent;
+  background: green;
   overflow-x: none;
 }
 .canvasbg {

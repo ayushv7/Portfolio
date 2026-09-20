@@ -130,7 +130,7 @@ window.onload = function () {
   });
   settingbtn.addEventListener("click", () => {
     if (root.style.display !== "none") {
-      settingpage.style.display = "block";
+      settingpage.style.display = "flex";
       root.style.display = "none";
     }
   });
