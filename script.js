@@ -15,6 +15,7 @@ window.onload = function () {
   const settingpage = document.querySelector(".settingspg");
   const settingbtn = document.querySelector(".settings-btn");
   const root = document.querySelector(".root");
+  const sbackbtn = document.querySelector('.sbackbtn');
   boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
@@ -134,7 +135,12 @@ window.onload = function () {
       root.style.display = "none";
     }
   });
-
+  sbackbtn.addEventListener("click", () => {
+    if (root.style.display == "none") {
+      settingpage.style.display = "none";
+      root.style.display = "block";
+    }
+  });
   document.addEventListener("mousedown", function () {
     pointer.style.transition = "0.4s";
     pointer.style.transform = "scale(1.5)";
