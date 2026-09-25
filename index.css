@@ -96,19 +96,48 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 1em;
+  gap: 0.4em;
 }
 .theme-page > div{
   width: 93%;
   background-color: transparent;
-  padding: 1em;
+  padding: 0.57em 0.8em;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.theme-page > div > button {
-  
+.theme-page > div > div {
+  background: green;
+  font-size: 1rem;
+  transform: translateX(0.21em);
+}
+.box {
+  /* height: 22px; */
+  width: 40px; 
+  padding: 0.45em;
+  padding-right: 3.3em;
+  transform: scale(1.1);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateX(-10px);
+  border-radius: 1.5em;
+}
+.slider{
+  height: 19px;
+  width: 19px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.slider-move {
+  transform: translateX(1.4em);
 }
 .canvasbg {
   position: fixed;
