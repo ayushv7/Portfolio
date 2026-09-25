@@ -16,9 +16,11 @@ window.onload = function () {
   const settingbtn = document.querySelector(".settings-btn");
   const root = document.querySelector(".root");
   const sbackbtn = document.querySelector('.sbackbtn');
+  const sliders = document.querySelectorAll('.slider');
   boxclick.volume = 0.34;
   click.volume = 0.25;
   let i = 0;
+  let o = 0;
   // let clr = [
   //   "rgba(6, 182, 212, 0.5)",
   //   "rgba(99, 102, 241, 0.5)",
@@ -45,6 +47,13 @@ window.onload = function () {
     } else {
       header.classList.add("phase2");
     }
+  });
+
+  sliders.forEach((sliders) => {
+    sliders.addEventListener('click', () => {
+    sliders.classList.toggle('slider-move');
+    console.log('clicked');
+  });
   });
   const touch = {
     x: null,
