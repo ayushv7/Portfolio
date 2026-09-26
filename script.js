@@ -15,10 +15,13 @@ window.onload = function () {
   const settingpage = document.querySelector(".settingspg");
   const settingbtn = document.querySelector(".settings-btn");
   const root = document.querySelector(".root");
-  const sbackbtn = document.querySelector('.sbackbtn');
-  const sliders = document.querySelectorAll('.slider');
+  const sbackbtn = document.querySelector(".sbackbtn");
+  const sliders = document.querySelectorAll(".slider");
+  const sl1 = document.querySelector(".s1");
+  const sl2 = document.querySelector(".s2");
   boxclick.volume = 0.34;
   click.volume = 0.25;
+  sl1.classList.add("slider-move");
   let i = 0;
   let o = 0;
   // let clr = [
@@ -50,11 +53,56 @@ window.onload = function () {
   });
 
   sliders.forEach((sliders) => {
-    sliders.addEventListener('click', () => {
-    sliders.classList.toggle('slider-move');
-    console.log('clicked');
+    sliders.addEventListener("click", () => {
+      if (sl1.classList.contains("slider-move") == true) {
+        sl1.classList.remove("slider-move");
+        sl2.classList.add("slider-move");
+        document.querySelector(".can1").style.display = "none";
+        document.querySelector(".can2").style.display = "none";
+        document.documentElement.style.setProperty("--maincolor", "#000");
+        document.querySelector(".header").style.border = "1px solid lightblue";
+        document.querySelectorAll(".headbtn").forEach((btn) => {
+          btn.style.border = "1px solid lightblue";
+        });
+        document.querySelector("#main").style.border = "1px solid lightblue";
+        document.querySelector("#skills").style.border = "2px solid lightblue";
+        document.querySelector("#projects").style.border =
+          "2px solid lightblue";
+        document.querySelector("#contacts").style.border =
+          "2px solid lightblue";
+        document.querySelector(".scover").style.border = "2px solid lightblue";
+        // document.querySelector('#pointer').style.backgroundColor = 'rgba(255, 68, 0, 0.1)';
+        document.querySelector("#pointer").style.background = "transparent";
+        document.querySelector("#pointer").style.border =
+          "3px solid rgba(10, 153, 139, 0.525)";
+      } else if (sl2.classList.contains("slider-move") == true) {
+        sl1.classList.add("slider-move");
+        sl2.classList.remove("slider-move");
+        document.querySelector(".can1").style.display = "block";
+        document.querySelector(".can2").style.display = "block";
+        document.documentElement.style.setProperty("--maincolor", "#fff");
+        document.querySelector(".header").style.border =
+          "1px solid rgba(255, 255, 255, 0.1)";
+        document.querySelectorAll(".headbtn").forEach((btn) => {
+          btn.style.border = "1px solid rgba(255, 255, 255, 0.1)";
+        });
+        document.querySelector("#main").style.border =
+          "1px solid rgba(255, 255, 255, 0.1)";
+        document.querySelector("#skills").style.border =
+          "1px solid rgba(255, 255, 255, 0.1)";
+        document.querySelector("#projects").style.border =
+          "1px solid rgba(255, 255, 255, 0.1)";
+        document.querySelector("#contacts").style.border =
+          "1px solid rgba(255, 255, 255, 0.1)";
+        document.querySelector(".scover").style.border =
+          "1px solid rgba(255, 255, 255, 0.1)";
+        document.querySelector("#pointer").style.backgroundColor =
+          "rgba(255, 255, 255, 0.752)";
+      }
+      // console.log('clicked');
+    });
   });
-  });
+
   const touch = {
     x: null,
     y: null,
