@@ -22,6 +22,12 @@ window.onload = function () {
   boxclick.volume = 0.34;
   click.volume = 0.25;
   sl1.classList.add("slider-move");
+
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    gyroscope: true,
+    max: 15,
+    speed: 400,
+  });
   let i = 0;
   let o = 0;
   // let clr = [
