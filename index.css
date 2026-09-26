@@ -112,7 +112,7 @@ body {
   justify-content: space-between;
 }
 .theme-page > div > div {
-  background: green;
+  /* background: green; */
   font-size: 1rem;
   transform: translateX(0.21em);
 }
