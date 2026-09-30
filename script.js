@@ -20,7 +20,7 @@ window.onload = function () {
   const sl1 = document.querySelector(".s1");
   const settingBtn2 = document.querySelector(".settings-btn-2");
   const settingBtn3 = document.querySelector(".settings-btn-3");
-  
+  const settingBtn4 = document.querySelector(".settings-btn-4");
   const sl2 = document.querySelector(".s2");
   boxclick.volume = 0.34;
   click.volume = 0.25;
